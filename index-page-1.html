@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumaCard | Secure Credit Card Matching</title>
+  <meta name="description" content="Find credit card opportunities through a secure, simple, and trustworthy LumaCard experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body data-page="lead">
+  <div class="site-shell page-lead">
+    <header class="site-header" data-header>
+      <div class="container nav-row">
+        <a class="brand-mark" href="#top" aria-label="LumaCard home">
+          <span class="brand-icon" aria-hidden="true">
+            <span class="brand-card-chip"></span>
+            <span class="brand-card-wave"></span>
+          </span>
+          <span class="brand-text">LumaCard</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" data-menu>
+          <a href="#how-it-works">How it works</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#faq">FAQ</a>
+          <a href="#lead-form" class="button button-secondary">Start securely</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Page 1: lead-generation layout with supporting content around the form. -->
+      <section class="hero hero-lead section">
+        <div class="hero-orb hero-orb-a"></div>
+        <div class="hero-orb hero-orb-b"></div>
+        <div class="container hero-grid hero-grid-lead">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Trusted card matching, made clear</div>
+            <h1>See credit card opportunities with a faster, more secure first step.</h1>
+            <p class="hero-text">
+              LumaCard helps people explore suitable card options through a streamlined matching experience that keeps privacy, clarity, and simplicity at the center.
+            </p>
+            <div class="hero-inline-meta">
+              <span>Encrypted onboarding</span>
+              <span>Mobile-first experience</span>
+              <span>Premium trust design</span>
+            </div>
+            <div class="hero-proof">
+              <div class="proof-pill">
+                <strong>256-bit</strong>
+                <span>Encrypted experience</span>
+              </div>
+              <div class="proof-pill">
+                <strong>2 mins</strong>
+                <span>Average start time</span>
+              </div>
+              <div class="proof-pill">
+                <strong>Zero</strong>
+                <span>Hidden surprises</span>
+              </div>
+            </div>
+            <p class="hero-note">A cleaner first impression increases trust, improves form starts, and keeps the next step obvious.</p>
+            <div class="hero-media-card glass reveal" data-parallax>
+              <div class="hero-media-glow hero-media-glow-a"></div>
+              <div class="hero-media-glow hero-media-glow-b"></div>
+              <div class="hero-float hero-float-a">
+                <strong>Soft approval path</strong>
+                <span>Cleaner steps, calmer decisions</span>
+              </div>
+              <div class="hero-float hero-float-b">
+                <strong>Secure match flow</strong>
+                <span>Built for clarity and trust</span>
+              </div>
+              <img src="assets/hero-credit-card-premium.png.png" alt="Premium black credit card floating in studio light">
+              <div class="hero-media-copy">
+                <span class="mini-label">Built for confidence</span>
+                <p>Premium card discovery with modern trust signals and a guided next step.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lead-form-wrap reveal">
+            <div class="form-card">
+              <div class="form-card-head">
+                <span class="eyebrow">Secure pre-check</span>
+                <h2>Start your LumaCard profile</h2>
+                <p>Complete the form below to continue to the next step in a simple, secure process.</p>
+              </div>
+              <div class="form-topline">
+                <span>Private</span>
+                <span>No hidden fees</span>
+                <span>Quick next step</span>
+              </div>
+              <div class="completion-meter" aria-hidden="true">
+                <div class="completion-meter-bar" data-completion-bar></div>
+              </div>
+              <p class="completion-copy" data-completion-copy>0 of 4 fields complete</p>
+
+              <!-- Exact requested fields: Gender, First Name, Last Name, Email. -->
+              <form id="lead-form" class="lead-form" novalidate data-form>
+                <div class="field-group">
+                  <label for="gender">Gender</label>
+                  <div class="select-wrap">
+                    <select id="gender" name="gender" required data-field>
+                      <option value="">Select your gender</option>
+                      <option>Female</option>
+                      <option>Male</option>
+                      <option>Non-binary</option>
+                      <option>Prefer not to say</option>
+                    </select>
+                  </div>
+                  <small class="error-text" data-error-for="gender"></small>
+                </div>
+
+                <div class="form-row two-col">
+                  <div class="field-group">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" name="firstName" type="text" placeholder="Jordan" autocomplete="given-name" required data-field>
+                    <small class="error-text" data-error-for="first-name"></small>
+                  </div>
+                  <div class="field-group">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" name="lastName" type="text" placeholder="Brooks" autocomplete="family-name" required data-field>
+                    <small class="error-text" data-error-for="last-name"></small>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required data-field>
+                  <small class="error-text" data-error-for="email"></small>
+                </div>
+
+                <button class="button button-primary button-block button-glow" type="submit">
+                  Continue securely
+                </button>
+
+                <div class="form-reassurance">
+                  <div>
+                    <strong>Your information is secure</strong>
+                    <span>Encrypted handling from the moment you begin.</span>
+                  </div>
+                  <div>
+                    <strong>No hidden fees</strong>
+                    <span>A transparent, simple first step.</span>
+                  </div>
+                  <div>
+                    <strong>Quick process</strong>
+                    <span>Start in minutes and continue when ready.</span>
+                  </div>
+                </div>
+                <p class="form-success" data-form-success aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+
+          <aside class="hero-side reveal">
+            <div class="stack-card stack-card-dark">
+              <div class="stack-card-copy">
+                <span class="mini-label">Why people start here</span>
+                <h3>Confidence before the next click.</h3>
+                <p>Clear steps, privacy-first messaging, and a polished flow built to reduce friction and build trust.</p>
+              </div>
+              <img src="assets/hero-financial-trust.png.png" alt="Shield and credit card visual representing secure financial matching">
+            </div>
+            <div class="mini-grid">
+              <div class="mini-panel mini-panel-cyan">
+                <span class="mini-label">Privacy first</span>
+                <p>Clean consent language and secure form handling.</p>
+              </div>
+              <div class="mini-panel mini-panel-gold">
+                <span class="mini-label">Card focused</span>
+                <p>Tailored messaging for credit card opportunity discovery.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="brand-strip section-tight">
+        <div class="container brand-strip-row reveal">
+          <p>Designed to feel secure, transparent, and easy to continue on every screen.</p>
+          <div class="brand-stat-list">
+            <div><strong>Fast</strong><span>simple start</span></div>
+            <div><strong>Clear</strong><span>next-step guidance</span></div>
+            <div><strong>Secure</strong><span>trust-led UX</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">How it works</span>
+            <h2>A guided process built to lower friction.</h2>
+            <p>You answer a few details, LumaCard organizes the start of your journey, and the next step stays clear from beginning to end.</p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card reveal">
+              <span class="step-index">01</span>
+              <h3>Complete the secure form</h3>
+              <p>Provide a few details so the experience can continue in a cleaner, more relevant way.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-index">02</span>
+              <h3>Review aligned opportunities</h3>
+              <p>Explore card-focused messaging and next steps designed for clarity and confidence.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-index">03</span>
+              <h3>Continue with confidence</h3>
+              <p>Move forward knowing the process emphasizes transparency, speed, and trust.</p>
+            </article>
+          </div>
+          <div class="process-visual glass reveal">
+            <img src="assets/ChatGPT Image 14 mars 2026, 10_54_01.png" alt="Illustration of a three-step secure credit card matching process">
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="section section-muted">
+        <div class="container split-feature">
+          <div class="split-copy reveal">
+            <span class="eyebrow">Benefits</span>
+            <h2>Fintech polish with conversion-focused structure.</h2>
+            <div class="benefit-list">
+              <article class="benefit-item benefit-tile benefit-tile-blue">
+                <h3>Secure application feel</h3>
+                <p>Every visual cue reinforces privacy, protection, and a guided next step.</p>
+              </article>
+              <article class="benefit-item benefit-tile benefit-tile-cyan">
+                <h3>Easy card matching</h3>
+                <p>Messaging is organized around simplicity so users understand what happens next.</p>
+              </article>
+              <article class="benefit-item benefit-tile benefit-tile-gold">
+                <h3>Fast and simple progress</h3>
+                <p>Clear hierarchy, lightweight interactions, and concise content reduce drop-off risk.</p>
+              </article>
+            </div>
+          </div>
+          <div class="split-visual reveal" data-parallax>
+            <div class="image-frame image-frame-large">
+              <img src="assets/benefits-finance-illustration.png.png" alt="Illustration showing secure finance and mobile credit card experience">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container trust-panel reveal">
+          <div class="trust-copy">
+            <span class="eyebrow">Trust and privacy</span>
+            <h2>Security language users can understand at a glance.</h2>
+            <p>From encrypted cues to simplified reassurance copy, the experience is built to answer the trust questions users have before they ask them.</p>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon">01</span>
+              <div>
+                <h3>Protected data flow</h3>
+                <p>Clear, secure messaging without heavy legal clutter.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">02</span>
+              <div>
+                <h3>Readable disclosures</h3>
+                <p>Trust copy appears exactly where hesitation typically happens.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">03</span>
+              <div>
+                <h3>Friendly support feel</h3>
+                <p>Visual structure signals there is a real platform behind the experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-muted">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Questions</span>
+            <h2>Common reassurance before users continue.</h2>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item reveal" data-accordion-item>
+              <button class="faq-trigger" type="button" aria-expanded="false" data-accordion-trigger>
+                Is this form secure?
+              </button>
+              <div class="faq-panel" data-accordion-panel>
+                <p>Yes. The page is designed around secure handling cues and privacy-first messaging so the start of the process feels safe and straightforward.</p>
+              </div>
+            </article>
+            <article class="faq-item reveal" data-accordion-item>
+              <button class="faq-trigger" type="button" aria-expanded="false" data-accordion-trigger>
+                How long does the first step take?
+              </button>
+              <div class="faq-panel" data-accordion-panel>
+                <p>Only a few fields are required, making the first step fast to complete on both mobile and desktop.</p>
+              </div>
+            </article>
+            <article class="faq-item reveal" data-accordion-item>
+              <button class="faq-trigger" type="button" aria-expanded="false" data-accordion-trigger>
+                Why does the design focus so much on trust?
+              </button>
+              <div class="faq-panel" data-accordion-panel>
+                <p>Credit card journeys convert better when users understand what will happen next and feel confident that their information is handled responsibly.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-banner-section">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div>
+              <span class="eyebrow">Ready to begin</span>
+              <h2>Start with a simple, secure profile.</h2>
+            </div>
+            <a class="button button-primary" href="#lead-form">Continue with LumaCard</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <a class="brand-mark footer-brand" href="#top" aria-label="LumaCard home">
+            <span class="brand-icon" aria-hidden="true">
+              <span class="brand-card-chip"></span>
+              <span class="brand-card-wave"></span>
+            </span>
+            <span class="brand-text">LumaCard</span>
+          </a>
+          <p>LumaCard is a modern credit card offer platform focused on clarity, trust, and secure user journeys.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index-page-2.html">Offers page</a>
+          <a href="#faq">FAQ</a>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-sticky-cta" data-mobile-cta>
+      <span>Ready to continue?</span>
+      <a href="#lead-form" class="button button-primary">Start securely</a>
+    </div>
+  </div>
+
+  <script src="chatbot-knowledge.js"></script>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
